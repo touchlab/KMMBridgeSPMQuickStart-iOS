@@ -139,7 +139,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63ACC6CC2AAE3D8E00965310 /* Build configuration list for PBXNativeTarget "ios" */;
 			buildPhases = (
-				638507442AC26F3B00ADA13A /* ShellScript */,
 				63ACC6A32AAE3D8D00965310 /* Sources */,
 				63ACC6A42AAE3D8D00965310 /* Frameworks */,
 				63ACC6A52AAE3D8D00965310 /* Resources */,
@@ -261,26 +260,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		638507442AC26F3B00ADA13A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../..\"\n./gradlew :allshared:embedAndSignAppleFrameworkForXcode\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63ACC6A32AAE3D8D00965310 /* Sources */ = {
@@ -464,11 +443,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"-lsqlite3",
-					"-framework",
-					allshared,
-				);
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -508,11 +483,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"-lsqlite3",
-					"-framework",
-					allshared,
-				);
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
